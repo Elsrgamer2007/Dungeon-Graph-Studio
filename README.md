@@ -1,14 +1,14 @@
-# 🌌 Dungeon Graph Studio
+# 🏰 Dungeon Graph Studio
 
-O **Dungeon Graph Studio** é uma ferramenta de geração procedural de masmorras espaciais desenvolvida em **GameMaker (GML)**. O projeto aplica conceitos formais de **Teoria dos Grafos** para garantir que cada mapa gerado seja matematicamente solvável, eliminando problemas clássicos de *game design* como *softlocks*, ilhas isoladas e caminhos sem saída.
+O **Dungeon Graph Studio** é uma ferramenta de geração procedural de masmorras e biomas desenvolvida em **GameMaker (GML)**. O projeto aplica conceitos formais de **Teoria dos Grafos** para garantir que cada mapa gerado seja matematicamente solvável, eliminando problemas clássicos de *game design* como *softlocks*, ilhas isoladas e caminhos sem saída.
 
 ---
 
 ## 🛠️ Conceitos de Grafos Aplicados
 
-- **Modelagem de Masmorra:** 
-  - **Vértices ($V$):** Representam as salas/planetas (`obj_sala`).
-  - **Arestas ($E$):** Representam os corredores e rotas espaciais entre os planetas.
+- **Modelagem do Sistema:** 
+  - **Vértices ($V$):** Representam as salas e biomas (`obj_sala`).
+  - **Arestas ($E$):** Representam os corredores e caminhos de conexão entre as salas.
   - **Dígrafos:** Utilizados em salas de desafios/mini-bosses com caminhos unidirecionais.
 - **Estrutura de Dados:** **Lista de Adjacência** (`ds_map` + `ds_list`), otimizando o uso de memória em complexidade $O(V + E)$ por se tratar de um grafo esparso.
 - **Métrica de Peso:** **Distância de Manhattan** ($d = \vert{}\Delta x\vert{} + \vert{}\Delta y\vert{}$), ideal para o cálculo de peso das arestas em grades ortogonais.
@@ -23,7 +23,7 @@ O **Dungeon Graph Studio** é uma ferramenta de geração procedural de masmorra
 | Tecla | Ação / Funcionalidade |
 | :---: | :--- |
 | **`[R]`** | Gera uma nova **Dungeon Procedural** a partir de uma *seed* aleatória. |
-| **`[M]`** | Gera o modo **Overworld / Super Zona** (grade expansiva $5 \times 4$). |
+| **`[M]`** | Gera o modo **Overworld / Super Zona** (grade expansiva de biomas $5 \times 4$). |
 | **`[1]`** | Alterna a exibição das **Arestas do Grafo Base** (linhas de conexão). |
 | **`[3]`** | Alterna a exibição do **Caminho Crítico / Dijkstra** (linha amarela). |
 | **`[S]`** | Permite inserir manualmente uma **Seed** customizada. |
